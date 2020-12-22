@@ -18,3 +18,10 @@ use Illuminate\Support\Facades\Route;
     return $request->user();
 });*/
 
+
+Route::get('/company', function()
+{
+    return [
+        'st' => true,
+    ];
+});
