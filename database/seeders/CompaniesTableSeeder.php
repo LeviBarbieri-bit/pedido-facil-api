@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-
+use App\Models\Companies;
 class CompaniesTableSeeder extends Seeder
 {
     /**
@@ -13,6 +13,6 @@ class CompaniesTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Models\Companies::class, 30)->create();
+        Companies::factory()->count(10)->create();
     } 
 }
