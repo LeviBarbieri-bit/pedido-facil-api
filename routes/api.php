@@ -19,9 +19,20 @@ use Illuminate\Support\Facades\Route;
 });*/
 
 
-Route::get('/company', function()
-{
-    return [
-        'st' => true,
-    ];
+Route::prefix('/admin/companies')->group(function () {
+    Route::get('/list', 'Api\Admin\CompaniesController@index');
+    Route::get('/{id}', 'Api\Admin\CompaniesController@index');
+    Route::post('/add', 'Api\Admin\CompaniesController@store');
+    Route::post('/update', 'Api\Admin\CompaniesController@update');
+    Route::post('/delete', 'Api\Admin\CompaniesController@destroy');
 });
+
+/*Route::prefix('products')->group(function () {
+
+    Route::get('/list', 'Api\ProductsController@index');
+    Route::post('/add', 'Api\ProductsController@store');
+    Route::post('/update', 'Api\ProductsController@update');
+    Route::post('/delete', 'Api\ProductsController@destroy');
+
+});*/
+//Route::get('products', 'Api\ProductsController@index');

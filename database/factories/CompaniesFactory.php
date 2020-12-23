@@ -12,7 +12,7 @@ class CompaniesFactory extends Factory
      *
      * @var string
      */
-    protected $model = App\Models\Companies::class;
+    protected $model = Companies::class;
 
     /**
      * Define the model's default state.
