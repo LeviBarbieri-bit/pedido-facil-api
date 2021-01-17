@@ -33,4 +33,5 @@ Route::middleware('auth:api')->group(function () {
         Route::post('/update', 'Api\Company\ProductsController@update');
         Route::post('/delete', 'Api\Company\ProductsController@destroy');
     });
+
 });
